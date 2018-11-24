@@ -6,8 +6,8 @@ RUN mkdir -p \
 
 WORKDIR /app
 
-COPY nginx.conf get.lua post.lua post_lib.lua ./
+COPY nginx.conf get.lua post.lua post_lib.lua ./conf/
 
 EXPOSE 80
 
-CMD ["nging", "-p", "/app/", "-c", "/app/conf/nginx.conf"]
+CMD ["nginx", "-p", "/app/", "-c", "/app/conf/nginx.conf", "-g", "\"daemon off;\""]
