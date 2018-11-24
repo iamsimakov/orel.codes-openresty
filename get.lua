@@ -1,1 +1,1 @@
-ngx.say('get')
+ngx.say('Olololol only post request allowed!')
